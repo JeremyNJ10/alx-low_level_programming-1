@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * print_triangle - A function that prints a triangle,
@@ -20,6 +19,7 @@ void print_triangle(int size)
 			{
 				if (j < n)
 					_putchar(' ');
+				_putchar('#');
 			}
 			n--;
 			_putchar('\n');
