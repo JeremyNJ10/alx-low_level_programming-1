@@ -1,24 +1,23 @@
 #include "holberton.h"
 
 /**
- * print_triangle - print traingle with #'s with given size
- * @size: size of triangle to draw
+ * more_numbers - prints numbers between 0 to 14
+ * 10 times.
+ * Return: no return.
  */
 
-void print_triangle(int size)
+void more_numbers(void)
 {
-	int height;
-	int width;
-	int draw;
+	int i, ch;
 
-	if (size <= 0)
-		_putchar('\n');
-	for (height = 1; height <= size; height++)
+	for (i = 0; i < 10; i++)
 	{
-		for (width = 1; width <= (size - height); width++)
-			_putchar(' ');
-		for (draw = 1; draw <= height; draw++)
-			_putchar('#');
+		for (ch = 0; ch < 15; ch++)
+		{
+			if (ch >= 10)
+				_putchar((ch / 10) + 48);
+			_putchar((ch % 10) + 48);
+		}
 		_putchar('\n');
 	}
 }
