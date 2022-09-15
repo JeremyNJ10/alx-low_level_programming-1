@@ -1,30 +1,24 @@
 #include "holberton.h"
 
 /**
- * print_triangle - A function that prints a triangle,
- * followed by a new line.
- * @size: An input integer
- * Return: 0
+ * print_triangle - print traingle with #'s with given size
+ * @size: size of triangle to draw
  */
 
 void print_triangle(int size)
 {
-	int i = 0, j, n = size - 1;
+	int height;
+	int width;
+	int draw;
 
-	if (size > 0)
-	{
-		for (; i < size; i++)
-		{
-			for (j = 0; j < size; j++)
-			{
-				if (j < n)
-					_putchar(' ');
-				_putchar('#');
-			}
-			n--;
-			_putchar('\n');
-		}
-	}
-	else
+	if (size <= 0)
 		_putchar('\n');
+	for (height = 1; height <= size; height++)
+	{
+		for (width = 1; width <= (size - height); width++)
+			_putchar(' ');
+		for (draw = 1; draw <= height; draw++)
+			_putchar('#');
+		_putchar('\n');
+	}
 }
