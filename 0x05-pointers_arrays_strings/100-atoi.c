@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * _atoi - A function that convert a string to an integer.
- * @s: An input string
+ * _atoi - converts string to int
+ * @s: string to convert
+ * Description: converts string to int considering all negatives
  * Return: integer
  */
 
@@ -28,3 +29,4 @@ int _atoi(char *s)
 			return (val);
 	}
 }
+
