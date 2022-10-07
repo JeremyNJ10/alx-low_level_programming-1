@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int s2_len = 0;
 
 	if (s1)
-	{{
+	{
 		while (s1[s1_len])
 			++s1_len;
 	}
@@ -32,7 +32,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		while (s2_len < n && s2[s2_len])
 			++s2_len;
 	}
-
 	cat = malloc(sizeof(char) * s1_len + s2_len + 1);
 	if (!cat)
 		return (NULL);
